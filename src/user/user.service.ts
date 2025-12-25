@@ -13,7 +13,7 @@ export class UserService {
         ...dto,
       },
     });
-    const { password: _, ...safeUser } = user;
+    const { password: _,hashedRt, ...safeUser } = user;
     return { user: safeUser };
   }
 }

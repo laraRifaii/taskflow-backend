@@ -35,6 +35,7 @@ export default class JwtStrategy extends PassportStrategy(
 
     if (user) {
       delete (user as any).password;
+      delete (user as any).hashedRt;
     }
     return user;
   }
